@@ -220,7 +220,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
 
   // 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
-  var geoJSONurl = "https://github.com/fraxen/tectonicplates/blob/master/GeoJSON/PB2002_boundaries.json";
+  var geoJSONurl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
   
   d3.json(geoJSONurl).then((data) => {
     // console.log(data);  
