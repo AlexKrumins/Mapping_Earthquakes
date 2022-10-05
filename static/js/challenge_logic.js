@@ -153,16 +153,25 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     // 6. Use the function that determines the radius of the earthquake marker based on its magnitude.
     // NOTE: THE ONLINE MODULE INSTRUCTIONS STATE "In Step 6, use the same parameters from the preceding step in the getRadius() function."
     function getRadius(magnitude) {
-      var magRadius = 1;
-
-      if (magnitude > 6) {
-        magRadius = magnitude * 6;
-      }
       if (magnitude > 5) {
-        magColor = magnitude * 5;
+        return magnitude * 4;
       }
-      return magRadius;
+      if (magnitude > 6) {
+
+        return magnitude * 6;
+      }
     }
+    // function getRadius(magnitude) {
+    //   var magRadius = 1;
+
+    //   if (magnitude > 6) {
+    //     magRadius = magnitude * 6;
+    //   }
+    //   if (magnitude > 5) {
+    //     magColor = magnitude * 5;
+    //   }
+    //   return magRadius;
+    // }
 
     // 7. Creating a GeoJSON layer with the retrieved data that adds a circle to the map 
     // sets the style of the circle, and displays the magnitude and location of the earthquake
